@@ -1,0 +1,314 @@
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.clock {
+    border-radius: 100%;
+    /*background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;*/
+    /*background-size: 88%;*/
+    background: rgb(243, 243, 243);
+    height: 35em;
+    /*margin-top: 1%;*/
+    width: 35em;
+    border: rgba(0, 0, 0, 0.72) solid 2px;
+    display: flex;
+    /*justify-content:center;*/
+    overflow: hidden;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.clock.simple:after {
+    background: black;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5.5%;
+    height: 5.5%;
+    z-index: 10000;
+}
+
+/*
+
+THIS WORKS AND DIVIDES INTO FOUR :D
+.clock::before,
+.clock::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+}
+.clock::before {
+    left: 0;
+    background: linear-gradient(rgba(0, 128, 0, 0.48), rgba(0, 128, 0, 0.48) 50%, yellow 50%);
+}
+.clock::after {
+    left: 50%;
+    background: linear-gradient(red, red 50%, blue 50%);
+}
+.clock::before {
+    left: 0;
+    background: linear-gradient(rgba(0, 128, 0, 0.48), rgba(0, 128, 0, 0.48) 50%, yellow 50%);
+}
+.clock::after {
+    left: 50%;
+    background: linear-gradient(red, red 50%, blue 50%);
+}*/
+
+.person-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.person {
+    /*background: rgba(255,255,255,0.5);*/
+    background: black;
+    opacity: 0.7;
+    height: 40%;
+    left: 47.3%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 100%;
+    width: 5.5%;
+    border-radius: 20%;
+    border: black dashed 2px;
+}
+
+.spooky {
+    opacity: 0.3;
+    font-size: 0.3em;
+    display: inline;
+    width: 3%;
+}
+
+.spooky > .person-text {
+    left: 10%;
+
+}
+
+.julius-container {
+
+}
+
+.person-container {
+    /*animation: rotate 4s infinite steps(12);*/
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+    z-index: 10;
+}
+
+.mikki-container {
+    /*animation: rotate 50s infinite linear;*/
+    z-index: 5;
+}
+
+.julius {
+    background: #0d0d0d;
+}
+
+.person-text {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.5em;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    position: absolute;
+    top: 60%;
+    left: -10%;
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+li {
+    overflow: hidden;
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    transform-origin: 0 100%;
+}
+
+.text {
+    position: absolute;
+    left: -111%;
+    width: 200%;
+    top: -72%;
+    height: 196%;
+    z-index: 9999999;
+    text-align: center;
+    transform: skewY(60deg) rotate(105deg);
+    /* padding-top: 70%; */
+    padding: 69% 0;
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+li:first-child {
+    transform: rotate(0deg) skewY(-60deg);
+}
+
+li:nth-child(2) {
+    transform: rotate(30deg) skewY(-60deg);
+}
+
+li:nth-child(3) {
+    transform: rotate(60deg) skewY(-60deg);
+
+}
+
+li:nth-child(4) {
+    transform: rotate(90deg) skewY(-60deg);
+}
+
+li:nth-child(5) {
+    transform: rotate(120deg) skewY(-60deg);
+}
+
+li:nth-child(6) {
+    transform: rotate(150deg) skewY(-60deg);
+}
+
+li:nth-child(7) {
+    transform: rotate(180deg) skewY(-60deg);
+}
+
+li:nth-child(8) {
+    transform: rotate(210deg) skewY(-60deg);
+}
+
+li:nth-child(9) {
+    transform: rotate(240deg) skewY(-60deg);
+}
+
+li:nth-child(10) {
+    transform: rotate(270deg) skewY(-60deg);
+}
+
+li:nth-child(11) {
+    transform: rotate(300deg) skewY(-60deg);
+}
+
+li:nth-child(12) {
+    transform: rotate(330deg) skewY(-60deg);
+}
+
+li:first-child .text {
+    background: green;
+    background: maroon;
+
+}
+
+li:nth-child(2) .text {
+    background: tomato;
+    background: brown;
+
+}
+
+li:nth-child(3) .text {
+    background: gray;
+    background: maroon;
+
+}
+
+li:nth-child(4) .text {
+    background: yellow;
+    background: brown;
+
+}
+
+li:nth-child(5) .text {
+    background: orange;
+    background: maroon;
+
+}
+
+li:nth-child(6) .text {
+    background: purple;
+    background: brown;
+
+}
+
+li:nth-child(7) .text {
+    background: cyan;
+    background: maroon;
+
+}
+
+li:nth-child(8) .text {
+    background: brown;
+}
+
+li:nth-child(9) .text {
+    background: gray;
+    background: maroon;
+
+}
+
+li:nth-child(10) .text {
+    background: pink;
+    background: brown;
+
+}
+
+li:nth-child(11) .text {
+    background: maroon;
+}
+
+li:nth-child(12) .text {
+    background: gold;
+    background: brown;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .clock {
+        width: 18em;
+        height: 18em;
+    }
+
+    .person-text {
+        left: 0;
+        font-size: 0.6em;
+
+    }
+
+    .text {
+        font-size: 0.8em;
+        transform: skewY(60deg) rotate(105deg);
+
+    }
+
+}
